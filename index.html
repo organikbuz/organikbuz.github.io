@@ -2,26 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>organikbuz — Apps</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>organikbuz — Independent Mobile App Developer</title>
+<meta name="description" content="Independent iOS app developer. Focus, habits, productivity.">
+<meta name="author" content="organikbuz">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 640px; margin: 4rem auto; padding: 0 1.5rem; color: #222; line-height: 1.6; }
-  h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
-  .muted { color: #666; font-size: 0.95rem; }
-  ul { padding-left: 1.2rem; }
-  a { color: #0366d6; text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e5e5e0;
+    --accent: #0a6b3d;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    color: var(--muted);
+    margin: 0;
+  }
+  h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin: 0 0 1.25rem 0;
+    font-weight: 600;
+  }
+  section { margin-bottom: 3rem; }
+  .app {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .app-info { flex: 1; min-width: 220px; }
+  .app-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0 0 0.2rem 0;
+  }
+  .app-desc {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.45rem 0.95rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.15s ease;
+  }
+  .badge-live {
+    background: var(--accent);
+    color: white;
+  }
+  .badge-live:hover { opacity: 0.85; }
+  .badge-soon {
+    background: #f0efe9;
+    color: var(--muted);
+  }
+  .contact p { margin: 0; }
+  .contact a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .contact a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  footer a:hover { color: var(--text); }
 </style>
 </head>
 <body>
-<h1>organikbuz</h1>
-<p class="muted">Independent mobile app developer. Contact: <a href="mailto:liberumaviss@gmail.com">liberumaviss@gmail.com</a></p>
-<h2>Apps</h2>
-<ul>
-  <li><strong>FokusZeit</strong> — Pomodoro timer &amp; habit tracker (iOS)</li>
-  <li><strong>Tage Ohne</strong> — Quit habit tracker (iOS)</li>
-  <li><strong>PutzPlanner</strong> — Household cleaning schedule (iOS)</li>
-</ul>
-<p class="muted"><a href="/app-ads.txt">app-ads.txt</a></p>
+<div class="container">
+
+  <header>
+    <h1>organikbuz</h1>
+    <p class="tagline">Independent iOS app developer — focus, habits, productivity.</p>
+  </header>
+
+  <section>
+    <h2>Apps</h2>
+
+    <div class="app">
+      <div class="app-info">
+        <p class="app-name">FokusZeit</p>
+        <p class="app-desc">Pomodoro timer with habit tracking. iOS.</p>
+      </div>
+      <a class="badge badge-live" href="https://apps.apple.com/app/id6761782771">View on App Store</a>
+    </div>
+
+    <div class="app">
+      <div class="app-info">
+        <p class="app-name">Tage Ohne</p>
+        <p class="app-desc">Quit habit tracker — count clean days, build streaks. iOS.</p>
+      </div>
+      <span class="badge badge-soon">Coming soon</span>
+    </div>
+
+    <div class="app">
+      <div class="app-info">
+        <p class="app-name">PutzPlanner</p>
+        <p class="app-desc">Household cleaning schedule for shared homes. iOS.</p>
+      </div>
+      <span class="badge badge-soon">Coming soon</span>
+    </div>
+
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Support &amp; inquiries: <a href="mailto:liberumaviss@gmail.com">liberumaviss@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 organikbuz</span>
+    <a href="/app-ads.txt">app-ads.txt</a>
+  </footer>
+
+</div>
 </body>
 </html>
